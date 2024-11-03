@@ -43,12 +43,6 @@ body {
   overflow: hidden;
 }
 
-/* Fade out effect */
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
 /* Shine effect on user card */
 .user-container::before {
   content: "";
@@ -70,8 +64,9 @@ body {
 
 /* Hover effects */
 .user-container:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10; /* Bring hovered card to the front */
 }
 
 .user-container:hover::before {
@@ -80,11 +75,11 @@ body {
 }
 
 .user-container:hover:nth-child(even) {
-  transform: scale(1.05) rotate(-5deg);
+  transform: scale(1.1) rotate(-5deg);
 }
 
 .user-container:hover:nth-child(odd) {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
 }
 
 /* Close button styles */
@@ -133,13 +128,13 @@ body {
 /* Responsive styles */
 @media (max-width: 1024px) {
   .users-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .users-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .user-container {
@@ -157,6 +152,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .users-container {
+    grid-template-columns: 1fr;
+  }
+
   .user-container {
     padding: 10px;
   }
