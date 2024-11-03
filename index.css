@@ -64,9 +64,9 @@ body {
 
 /* Hover effects */
 .user-container:hover {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(2deg);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  z-index: 10; /* Bring hovered card to the front */
+  z-index: 10;
 }
 
 .user-container:hover::before {
@@ -75,11 +75,11 @@ body {
 }
 
 .user-container:hover:nth-child(even) {
-  transform: scale(1.1) rotate(-5deg);
+  transform: scale(1.1) rotate(-2deg);
 }
 
 .user-container:hover:nth-child(odd) {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(2deg);
 }
 
 /* Close button styles */
