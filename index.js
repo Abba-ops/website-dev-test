@@ -28,6 +28,13 @@ const users = [
     info: "A fitness enthusiast, Alex enjoys hiking and participating in marathons around the country.",
     image: "https://via.placeholder.com/80",
   },
+  {
+    name: "Emily Brown",
+    email: "emilybrown@example.com",
+    age: "29 years old",
+    info: "A culinary artist, Emily loves experimenting with recipes and exploring world cuisines.",
+    image: "https://via.placeholder.com/80",
+  },
 ];
 
 // Function to create and display user cards

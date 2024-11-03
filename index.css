@@ -69,6 +69,13 @@ body {
   z-index: 10;
 }
 
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .user-container:hover::before {
   opacity: 1;
   transform: translate(0, 20%);
